@@ -431,7 +431,6 @@ async def interactive_browser_ui():
       <div class="status-badge"><div class="status-dot"></div> Model Live (K=5)</div>
       <a href="/docs" target="_blank">Swagger API</a>
       <a href="/health" target="_blank">/health</a>
-      <a href="https://github.com/lingeshm-007/Ott-audience-segmentation-personalization" target="_blank">GitHub Repo</a>
     </div>
   </header>
 
