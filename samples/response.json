@@ -1,0 +1,12 @@
+{
+  "user_id": "USR-8192",
+  "segment_id": 3,
+  "segment_name": "Focused Drama & Story Viewers",
+  "recommendations": [
+    "Midnight Intrigue",
+    "Silent Witness",
+    "The Blind Spot",
+    "Frenzy Point"
+  ],
+  "distance_to_centroid": 1.7198
+}

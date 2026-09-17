@@ -1,0 +1,258 @@
+{
+  "evaluation_timestamp": "2026-09-17T13:50:12Z",
+  "overall_status": "PASS",
+  "clustering": {
+    "selected_k": 5,
+    "silhouette_score": 0.324,
+    "inertia": 2261.83,
+    "feature_count": 15,
+    "total_samples": 1000,
+    "experiments": [
+      {
+        "k": 2,
+        "inertia": 4428.97,
+        "silhouette_score": 0.3858,
+        "cluster_sizes": {
+          "0": 565,
+          "1": 435
+        }
+      },
+      {
+        "k": 3,
+        "inertia": 3296.51,
+        "silhouette_score": 0.3831,
+        "cluster_sizes": {
+          "0": 369,
+          "1": 432,
+          "2": 199
+        }
+      },
+      {
+        "k": 4,
+        "inertia": 2733.99,
+        "silhouette_score": 0.3658,
+        "cluster_sizes": {
+          "0": 431,
+          "1": 199,
+          "2": 155,
+          "3": 215
+        }
+      },
+      {
+        "k": 5,
+        "inertia": 2261.83,
+        "silhouette_score": 0.324,
+        "cluster_sizes": {
+          "0": 215,
+          "1": 206,
+          "2": 199,
+          "3": 154,
+          "4": 226
+        }
+      },
+      {
+        "k": 6,
+        "inertia": 2160.96,
+        "silhouette_score": 0.287,
+        "cluster_sizes": {
+          "0": 199,
+          "1": 154,
+          "2": 118,
+          "3": 215,
+          "4": 120,
+          "5": 194
+        }
+      },
+      {
+        "k": 7,
+        "inertia": 2075.42,
+        "silhouette_score": 0.2731,
+        "cluster_sizes": {
+          "0": 199,
+          "1": 110,
+          "2": 154,
+          "3": 215,
+          "4": 104,
+          "5": 100,
+          "6": 118
+        }
+      },
+      {
+        "k": 8,
+        "inertia": 2005.17,
+        "silhouette_score": 0.2142,
+        "cluster_sizes": {
+          "0": 118,
+          "1": 109,
+          "2": 102,
+          "3": 199,
+          "4": 153,
+          "5": 110,
+          "6": 102,
+          "7": 107
+        }
+      }
+    ]
+  },
+  "cluster_balance": {
+    "cluster_sizes": {
+      "0": 215,
+      "1": 206,
+      "2": 199,
+      "3": 154,
+      "4": 226
+    },
+    "cluster_percentages": {
+      "0": 21.5,
+      "1": 20.6,
+      "2": 19.9,
+      "3": 15.4,
+      "4": 22.6
+    },
+    "min_cluster_size": 154,
+    "max_cluster_size": 226,
+    "balance_ratio_min_to_max": 0.6814
+  },
+  "api_correctness": {
+    "total_tests": 5,
+    "passed_tests": 5,
+    "all_passed": true,
+    "details": [
+      {
+        "profile_name": "Heavy Action & Sci-Fi Power Viewers",
+        "status_code": 200,
+        "user_id": "USR-EVAL-HEAVY",
+        "predicted_segment_id": 0,
+        "predicted_segment_name": "Heavy Action & Sci-Fi Power Viewers",
+        "recommendations_count": 4,
+        "distance_to_centroid": 1.2314,
+        "passed": true
+      },
+      {
+        "profile_name": "Casual Low-Activity Weekend Viewers",
+        "status_code": 200,
+        "user_id": "USR-EVAL-CASUAL",
+        "predicted_segment_id": 1,
+        "predicted_segment_name": "Casual Low-Activity Weekend Viewers",
+        "recommendations_count": 4,
+        "distance_to_centroid": 1.4907,
+        "passed": true
+      },
+      {
+        "profile_name": "High-Diversity Genre Explorers",
+        "status_code": 200,
+        "user_id": "USR-EVAL-EXPLORER",
+        "predicted_segment_id": 2,
+        "predicted_segment_name": "High-Diversity Genre Explorers",
+        "recommendations_count": 4,
+        "distance_to_centroid": 1.7464,
+        "passed": true
+      },
+      {
+        "profile_name": "Focused Drama & Story Viewers",
+        "status_code": 200,
+        "user_id": "USR-EVAL-FOCUSED",
+        "predicted_segment_id": 3,
+        "predicted_segment_name": "Focused Drama & Story Viewers",
+        "recommendations_count": 4,
+        "distance_to_centroid": 1.0141,
+        "passed": true
+      },
+      {
+        "profile_name": "Short-Session Animation & Family Viewers",
+        "status_code": 200,
+        "user_id": "USR-EVAL-FAMILY",
+        "predicted_segment_id": 4,
+        "predicted_segment_name": "Short-Session Animation & Family Viewers",
+        "recommendations_count": 4,
+        "distance_to_centroid": 1.048,
+        "passed": true
+      }
+    ]
+  },
+  "edge_cases": {
+    "total_tests": 10,
+    "passed_tests": 10,
+    "all_passed": true,
+    "details": [
+      {
+        "case_name": "empty_top_genres",
+        "description": "Empty genre list should yield default popular/segment recommendations without crashing.",
+        "expected_status": 200,
+        "actual_status": 200,
+        "passed": true
+      },
+      {
+        "case_name": "unknown_unseen_genre",
+        "description": "Unrecognized genres should be safely ignored and not crash inference.",
+        "expected_status": 200,
+        "actual_status": 200,
+        "passed": true
+      },
+      {
+        "case_name": "zero_watch_time",
+        "description": "Zero watch time should map gracefully without divide-by-zero errors.",
+        "expected_status": 200,
+        "actual_status": 200,
+        "passed": true
+      },
+      {
+        "case_name": "large_valid_values",
+        "description": "High but valid continuous values should scale appropriately.",
+        "expected_status": 200,
+        "actual_status": 200,
+        "passed": true
+      },
+      {
+        "case_name": "missing_required_user_id",
+        "description": "Missing user_id field should return HTTP 422 validation error.",
+        "expected_status": 422,
+        "actual_status": 422,
+        "passed": true
+      },
+      {
+        "case_name": "negative_watch_time",
+        "description": "Negative watch time must be rejected by Pydantic validator.",
+        "expected_status": 422,
+        "actual_status": 422,
+        "passed": true
+      },
+      {
+        "case_name": "negative_session_mins",
+        "description": "Negative session length must be rejected by Pydantic validator.",
+        "expected_status": 422,
+        "actual_status": 422,
+        "passed": true
+      },
+      {
+        "case_name": "invalid_numeric_type",
+        "description": "String for float numeric field must be rejected with 422.",
+        "expected_status": 422,
+        "actual_status": 422,
+        "passed": true
+      },
+      {
+        "case_name": "invalid_completion_rate_out_of_bounds",
+        "description": "Completion rate > 1.0 must be rejected with 422.",
+        "expected_status": 422,
+        "actual_status": 422,
+        "passed": true
+      },
+      {
+        "case_name": "malformed_json_body",
+        "description": "Malformed JSON syntax should return clean HTTP 422 without Python traceback.",
+        "expected_status": 422,
+        "actual_status": 422,
+        "passed": true
+      }
+    ]
+  },
+  "reproducibility": {
+    "passed": true,
+    "iterations_tested": 5,
+    "segment_id": 3,
+    "segment_name": "Focused Drama & Story Viewers",
+    "distance_to_centroid": 1.7198,
+    "zero_drift_verified": true
+  }
+}

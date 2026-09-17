@@ -1,0 +1,107 @@
+{
+  "0": {
+    "segment_id": 0,
+    "segment_name": "Heavy Action & Sci-Fi Power Viewers",
+    "description": "High watch time, high frequency, long sessions; strong affinity for Action, Sci-Fi, and Thriller.",
+    "recommendation_strategy": "Prioritize high-octane blockbusters, franchise releases, and binge-ready action/sci-fi series.",
+    "recommended_genres": [
+      "Action",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "cluster_size": 215,
+    "percentage_of_users": 21.5,
+    "centroid_stats": {
+      "watch_time_hours": 44.9,
+      "avg_session_mins": 94.47,
+      "sessions_per_week": 10.48,
+      "completion_rate": 0.835,
+      "weekend_usage_ratio": 0.351,
+      "genre_diversity": 3.0
+    }
+  },
+  "1": {
+    "segment_id": 1,
+    "segment_name": "Casual Low-Activity Weekend Viewers",
+    "description": "Low total watch time, low weekly frequency, viewing concentrated heavily on weekends.",
+    "recommendation_strategy": "Surface popular trending titles, low-commitment comedies, and quick highlights.",
+    "recommended_genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "cluster_size": 206,
+    "percentage_of_users": 20.6,
+    "centroid_stats": {
+      "watch_time_hours": 5.72,
+      "avg_session_mins": 37.35,
+      "sessions_per_week": 2.06,
+      "completion_rate": 0.498,
+      "weekend_usage_ratio": 0.719,
+      "genre_diversity": 1.96
+    }
+  },
+  "2": {
+    "segment_id": 2,
+    "segment_name": "High-Diversity Genre Explorers",
+    "description": "High genre diversity across catalog, frequent viewing sessions, wide curiosity.",
+    "recommendation_strategy": "Promote varied discovery, curated cross-genre bundles, and critically acclaimed releases.",
+    "recommended_genres": [
+      "Romance",
+      "Thriller",
+      "Sci-Fi",
+      "Documentary"
+    ],
+    "cluster_size": 199,
+    "percentage_of_users": 19.9,
+    "centroid_stats": {
+      "watch_time_hours": 30.07,
+      "avg_session_mins": 62.07,
+      "sessions_per_week": 7.48,
+      "completion_rate": 0.676,
+      "weekend_usage_ratio": 0.395,
+      "genre_diversity": 6.4
+    }
+  },
+  "3": {
+    "segment_id": 3,
+    "segment_name": "Focused Drama & Story Viewers",
+    "description": "High completion rate, deliberate long-form viewing, strong preference for Drama, Romance, and Thrillers.",
+    "recommendation_strategy": "Prioritize character-driven narratives, acclaimed drama miniseries, and romance films.",
+    "recommended_genres": [
+      "Drama",
+      "Romance",
+      "Thriller"
+    ],
+    "cluster_size": 154,
+    "percentage_of_users": 15.4,
+    "centroid_stats": {
+      "watch_time_hours": 26.5,
+      "avg_session_mins": 75.14,
+      "sessions_per_week": 6.45,
+      "completion_rate": 0.807,
+      "weekend_usage_ratio": 0.402,
+      "genre_diversity": 1.94
+    }
+  },
+  "4": {
+    "segment_id": 4,
+    "segment_name": "Short-Session Animation & Family Viewers",
+    "description": "Short average sessions, moderate weekly frequency, heavy consumption of Animation and Family content.",
+    "recommendation_strategy": "Recommend family-friendly features, animated shorts, and kid-friendly episodic content.",
+    "recommended_genres": [
+      "Animation",
+      "Family",
+      "Comedy"
+    ],
+    "cluster_size": 226,
+    "percentage_of_users": 22.6,
+    "centroid_stats": {
+      "watch_time_hours": 11.42,
+      "avg_session_mins": 27.34,
+      "sessions_per_week": 4.09,
+      "completion_rate": 0.631,
+      "weekend_usage_ratio": 0.527,
+      "genre_diversity": 3.62
+    }
+  }
+}

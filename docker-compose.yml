@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  trainer:
+    build:
+      context: .
+      dockerfile: trainer/Dockerfile
+    container_name: ott_trainer
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MODEL_DIR=/models
+      - DATA_PATH=/app/data/dataset.csv
+    volumes:
+      - models_volume:/models
+    restart: "no"
+
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    container_name: ott_api
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MODEL_DIR=/models
+    volumes:
+      - models_volume:/models:ro
+    depends_on:
+      trainer:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; res = urllib.request.urlopen('http://localhost:8000/health'); assert res.getcode() == 200"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 3s
+
+  evaluator:
+    build:
+      context: .
+      dockerfile: evaluator/Dockerfile
+    container_name: ott_evaluator
+    environment:
+      - PYTHONUNBUFFERED=1
+      - API_URL=http://api:8000
+      - MODEL_DIR=/models
+      - OUTPUT_METRICS_PATH=/workspace/metrics.json
+    volumes:
+      - models_volume:/models:ro
+      - .:/workspace
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: "no"
+
+volumes:
+  models_volume:
+    name: ott_models_volume

@@ -1,0 +1,278 @@
+{
+  "dataset_rows": 1005,
+  "clean_rows": 1000,
+  "features": [
+    "watch_time_hours",
+    "avg_session_mins",
+    "sessions_per_week",
+    "completion_rate",
+    "weekend_usage_ratio",
+    "genre_diversity",
+    "genre_action",
+    "genre_animation",
+    "genre_comedy",
+    "genre_documentary",
+    "genre_drama",
+    "genre_family",
+    "genre_romance",
+    "genre_sci_fi",
+    "genre_thriller"
+  ],
+  "feature_count": 15,
+  "selected_k": 5,
+  "silhouette_score": 0.324,
+  "inertia": 2261.83,
+  "experiments": [
+    {
+      "k": 2,
+      "inertia": 4428.97,
+      "silhouette_score": 0.3858,
+      "cluster_sizes": {
+        "0": 565,
+        "1": 435
+      }
+    },
+    {
+      "k": 3,
+      "inertia": 3296.51,
+      "silhouette_score": 0.3831,
+      "cluster_sizes": {
+        "0": 369,
+        "1": 432,
+        "2": 199
+      }
+    },
+    {
+      "k": 4,
+      "inertia": 2733.99,
+      "silhouette_score": 0.3658,
+      "cluster_sizes": {
+        "0": 431,
+        "1": 199,
+        "2": 155,
+        "3": 215
+      }
+    },
+    {
+      "k": 5,
+      "inertia": 2261.83,
+      "silhouette_score": 0.324,
+      "cluster_sizes": {
+        "0": 215,
+        "1": 206,
+        "2": 199,
+        "3": 154,
+        "4": 226
+      }
+    },
+    {
+      "k": 6,
+      "inertia": 2160.96,
+      "silhouette_score": 0.287,
+      "cluster_sizes": {
+        "0": 199,
+        "1": 154,
+        "2": 118,
+        "3": 215,
+        "4": 120,
+        "5": 194
+      }
+    },
+    {
+      "k": 7,
+      "inertia": 2075.42,
+      "silhouette_score": 0.2731,
+      "cluster_sizes": {
+        "0": 199,
+        "1": 110,
+        "2": 154,
+        "3": 215,
+        "4": 104,
+        "5": 100,
+        "6": 118
+      }
+    },
+    {
+      "k": 8,
+      "inertia": 2005.17,
+      "silhouette_score": 0.2142,
+      "cluster_sizes": {
+        "0": 118,
+        "1": 109,
+        "2": 102,
+        "3": 199,
+        "4": 153,
+        "5": 110,
+        "6": 102,
+        "7": 107
+      }
+    }
+  ],
+  "cluster_profiles": [
+    {
+      "cluster_id": 0,
+      "segment_name": "Heavy Action & Sci-Fi Power Viewers",
+      "cluster_size": 215,
+      "percentage_of_users": 21.5,
+      "mean_watch_time_hours": 44.9,
+      "mean_avg_session_mins": 94.47,
+      "mean_sessions_per_week": 10.48,
+      "mean_completion_rate": 0.835,
+      "mean_weekend_usage_ratio": 0.351,
+      "mean_genre_diversity": 3.0,
+      "top_genres": [
+        {
+          "genre": "Sci-Fi",
+          "affinity_ratio": 0.902
+        },
+        {
+          "genre": "Action",
+          "affinity_ratio": 0.888
+        },
+        {
+          "genre": "Thriller",
+          "affinity_ratio": 0.87
+        }
+      ],
+      "description": "High watch time, high frequency, long sessions; strong affinity for Action, Sci-Fi, and Thriller.",
+      "recommendation_strategy": "Prioritize high-octane blockbusters, franchise releases, and binge-ready action/sci-fi series.",
+      "recommended_genres": [
+        "Action",
+        "Sci-Fi",
+        "Thriller"
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "segment_name": "Casual Low-Activity Weekend Viewers",
+      "cluster_size": 206,
+      "percentage_of_users": 20.6,
+      "mean_watch_time_hours": 5.72,
+      "mean_avg_session_mins": 37.35,
+      "mean_sessions_per_week": 2.06,
+      "mean_completion_rate": 0.498,
+      "mean_weekend_usage_ratio": 0.719,
+      "mean_genre_diversity": 1.96,
+      "top_genres": [
+        {
+          "genre": "Comedy",
+          "affinity_ratio": 0.694
+        },
+        {
+          "genre": "Drama",
+          "affinity_ratio": 0.66
+        },
+        {
+          "genre": "Family",
+          "affinity_ratio": 0.583
+        }
+      ],
+      "description": "Low total watch time, low weekly frequency, viewing concentrated heavily on weekends.",
+      "recommendation_strategy": "Surface popular trending titles, low-commitment comedies, and quick highlights.",
+      "recommended_genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "segment_name": "High-Diversity Genre Explorers",
+      "cluster_size": 199,
+      "percentage_of_users": 19.9,
+      "mean_watch_time_hours": 30.07,
+      "mean_avg_session_mins": 62.07,
+      "mean_sessions_per_week": 7.48,
+      "mean_completion_rate": 0.676,
+      "mean_weekend_usage_ratio": 0.395,
+      "mean_genre_diversity": 6.4,
+      "top_genres": [
+        {
+          "genre": "Thriller",
+          "affinity_ratio": 0.744
+        },
+        {
+          "genre": "Romance",
+          "affinity_ratio": 0.744
+        },
+        {
+          "genre": "Sci-Fi",
+          "affinity_ratio": 0.724
+        }
+      ],
+      "description": "High genre diversity across catalog, frequent viewing sessions, wide curiosity.",
+      "recommendation_strategy": "Promote varied discovery, curated cross-genre bundles, and critically acclaimed releases.",
+      "recommended_genres": [
+        "Romance",
+        "Thriller",
+        "Sci-Fi",
+        "Documentary"
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "segment_name": "Focused Drama & Story Viewers",
+      "cluster_size": 154,
+      "percentage_of_users": 15.4,
+      "mean_watch_time_hours": 26.5,
+      "mean_avg_session_mins": 75.14,
+      "mean_sessions_per_week": 6.45,
+      "mean_completion_rate": 0.807,
+      "mean_weekend_usage_ratio": 0.402,
+      "mean_genre_diversity": 1.94,
+      "top_genres": [
+        {
+          "genre": "Romance",
+          "affinity_ratio": 0.656
+        },
+        {
+          "genre": "Thriller",
+          "affinity_ratio": 0.63
+        },
+        {
+          "genre": "Drama",
+          "affinity_ratio": 0.591
+        }
+      ],
+      "description": "High completion rate, deliberate long-form viewing, strong preference for Drama, Romance, and Thrillers.",
+      "recommendation_strategy": "Prioritize character-driven narratives, acclaimed drama miniseries, and romance films.",
+      "recommended_genres": [
+        "Drama",
+        "Romance",
+        "Thriller"
+      ]
+    },
+    {
+      "cluster_id": 4,
+      "segment_name": "Short-Session Animation & Family Viewers",
+      "cluster_size": 226,
+      "percentage_of_users": 22.6,
+      "mean_watch_time_hours": 11.42,
+      "mean_avg_session_mins": 27.34,
+      "mean_sessions_per_week": 4.09,
+      "mean_completion_rate": 0.631,
+      "mean_weekend_usage_ratio": 0.527,
+      "mean_genre_diversity": 3.62,
+      "top_genres": [
+        {
+          "genre": "Animation",
+          "affinity_ratio": 0.858
+        },
+        {
+          "genre": "Comedy",
+          "affinity_ratio": 0.85
+        },
+        {
+          "genre": "Family",
+          "affinity_ratio": 0.819
+        }
+      ],
+      "description": "Short average sessions, moderate weekly frequency, heavy consumption of Animation and Family content.",
+      "recommendation_strategy": "Recommend family-friendly features, animated shorts, and kid-friendly episodic content.",
+      "recommended_genres": [
+        "Animation",
+        "Family",
+        "Comedy"
+      ]
+    }
+  ]
+}
